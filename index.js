@@ -734,3 +734,20 @@ async function runSelfTest() {
 }
 
 main().catch((err) => { process.stderr.write(`[fatal] ${err && err.name}\n`); process.exit(1); });
+
+
+
+
+
+
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('ASK-Ayan Ultra Bot is Live 24/7!');
+});
+
+app.listen(PORT, () => {
+  console.log(`[HTTP] Server listening on port ${PORT}`);
+});
