@@ -3,7 +3,7 @@
   "prefix": ".",
   "language": "bn",
   "timezone": "Asia/Dhaka",
-  "adminUids": ["REPLACE_WITH_ADMIN_UID"],
+  "adminUids": ["61560416895779"],
   "transport": {
     "adapter": "console",
     "host": "127.0.0.1",
