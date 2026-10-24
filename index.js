@@ -740,6 +740,7 @@ main().catch((err) => { process.stderr.write(`[fatal] ${err && err.name}\n`); pr
 
 
 
+
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -751,3 +752,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`[HTTP] Server listening on port ${PORT}`);
 });
+
+// প্রসেস যেন বন্ধ না হয় সে জন্য stdin চালু রাখা
+process.stdin.resume();
