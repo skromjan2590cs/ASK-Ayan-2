@@ -1,13 +1,8 @@
-# 🤖 ASK-Ayan Ultra Bot
+# 🤖 ASK-Ayan Ultra Bot v1
 
 A custom Facebook Messenger and multi-platform automation bot deployed on Render with 24/7 keep-alive web service integration.
 
 ---
-
-## 🚀 Live Status
-- **Web Service URL:** [https://ask-ayan-2-10.onrender.com](https://ask-ayan-2-10.onrender.com)
-- **Deployment Platform:** Render (Free Tier + Express Keep-Alive)
-- **Node.js Version:** v26.12.1
 
 ---
 
