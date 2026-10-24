@@ -5,11 +5,15 @@
   "main": "index.js",
   "private": true,
   "license": "MIT",
-  "engines": { "node": ">=22.0.0" },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "start": "node index.js",
     "start:console": "node index.js --console",
     "test": "node index.js --self-test"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
