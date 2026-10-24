@@ -1,0 +1,37 @@
+{
+  "botName": "ASK-Ayan",
+  "prefix": ".",
+  "language": "bn",
+  "timezone": "Asia/Dhaka",
+  "adminUids": ["REPLACE_WITH_ADMIN_UID"],
+  "transport": {
+    "adapter": "console",
+    "host": "127.0.0.1",
+    "port": 3000,
+    "webhookPath": "/webhook",
+    "graphApiVersion": "v21.0",
+    "requestTimeoutMs": 10000
+  },
+  "cooldowns": { "defaultSeconds": 3, "perUserSeconds": 2, "perThreadSeconds": 1 },
+  "rateLimit": {
+    "perUserMax": 10, "perUserWindowSeconds": 60,
+    "perThreadMax": 30, "perThreadWindowSeconds": 60
+  },
+  "queue": { "capacity": 200, "concurrency": 2, "perThreadCapacity": 10 },
+  "limits": {
+    "maxMessageLength": 1000, "maxArgs": 10, "maxArgLength": 200,
+    "maxReplyLength": 1800, "commandTimeoutMs": 10000
+  },
+  "retry": { "maxAttempts": 3, "baseDelayMs": 500, "maxDelayMs": 8000, "maxInlineWaitMs": 5000 },
+  "circuitBreaker": { "failureThreshold": 5, "resetSeconds": 30 },
+  "reconnect": { "maxAttempts": 5, "baseDelayMs": 1000, "maxDelayMs": 30000 },
+  "authHealth": { "checkIntervalSeconds": 300 },
+  "dedupe": { "ttlSeconds": 300, "maxEntries": 5000 },
+  "maintenance": {
+    "enabled": false,
+    "message": "বটে এখন রক্ষণাবেক্ষণের কাজ চলছে বন্ধু। একটু পরে আবার চেষ্টা করো। 🙏"
+  },
+  "features": { "typingIndicator": false },
+  "logging": { "level": "info" },
+  "shutdown": { "timeoutMs": 8000 }
+}
