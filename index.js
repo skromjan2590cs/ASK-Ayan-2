@@ -741,6 +741,7 @@ main().catch((err) => { process.stderr.write(`[fatal] ${err && err.name}\n`); pr
 
 
 
+// Express HTTP Keep-Alive Server
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -750,8 +751,19 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`[HTTP] Server listening on port ${PORT}`);
+  console.log(`[HTTP] Keep-Alive Server listening on port ${PORT}`);
 });
 
+// Prevent console adapter's stdin EOF / close event from triggering process exit
+process.stdin.resume();
+
+// Override exit attempts triggered by console adapter's EOF detection
+const preventExit = (e) => {
+  if (e && e.stack) console.log('[System] Intercepted exit call:', e.stack);
+};
+
+process.on('beforeExit', () => {
+  process.stdin.resume();
+});
 // প্রসেস যেন বন্ধ না হয় সে জন্য stdin চালু রাখা
 process.stdin.resume();
