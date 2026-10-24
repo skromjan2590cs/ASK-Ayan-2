@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 
+// ১. প্রসেস বন্ধ হওয়া ঠেকানোর জন্য হুক (একদম শুরুতে)
+const originalExit = process.exit;
+process.exit = function(code) {
+  console.log(`[System] Blocked process.exit(${code}) call to keep bot alive!`);
+};
+
 /**
  * ASK-Ayan entry point: config validation, logging with redaction, transport
  * adapters (console + Meta Messenger Platform webhook), supervisor
