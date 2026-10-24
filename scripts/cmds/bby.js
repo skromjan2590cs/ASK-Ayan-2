@@ -12,6 +12,8 @@ module.exports = {
   onStart: async function ({ api, event, args }) {
     const replies = [
       "Jaan, boloo kemon acho? ❤️",
+      "Hmm jann bby kmn acho?🙂",
+      "হুম জান তুমার জন্য অপেক্ষা করতে ছিলাম কই ছিলা এতো ক্ষণ",
       "Ummah! Amar bby ta ki korche? 🙈",
       "Kotha bolba na amar sathe? Khub miss korchilam! 🥺",
       "Ji babu, bolo ki bolba? Amar sob somoy tomar jonno somoy ache! 💕",
